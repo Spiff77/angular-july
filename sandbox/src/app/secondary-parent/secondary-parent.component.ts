@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {User} from '../model/user.model';
 
 @Component({
   selector: 'app-secondary-parent',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./secondary-parent.component.scss']
 })
 export class SecondaryParentComponent {
+
+  users: User[] = [{
+    age: 30,
+    name: 'Chantal goya'
+  },
+  {
+    age: 35,
+    name: 'Carlos'
+    }
+  ]
 
 }

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-parent.component.scss']
 })
 export class MainParentComponent {
-
+  thename = {
+   age: 20, name: 'Freddy'
+  }
 }

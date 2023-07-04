@@ -23,7 +23,7 @@ export class AppComponent {
   bgcolor = 'black'
 
   user: User = {
-    name: 'sdfdsz'
+    name: 'sdfdsz', age: 40
   }
 
   makeMeYoungPlease() {
