@@ -16,4 +16,8 @@ export class AppComponent {
     promo: .2,
     description: 'Un cd qu\'il est bien pour l\'écouter'
   }
+
+  toggleActive() {
+    this.product.active = !this.product.active
+  }
 }

@@ -8,27 +8,26 @@ import {User} from './model/user.model';
 })
 export class AppComponent {
 
- person = {
-   firstname: 'Thomas',
-   lastname: 'Lhomme',
-   age:37,
-   address:{
-     street: "Bolt street",
-     city: 'Liverpool'
-   }
- }
- employed = false
- displayStatus = true
- textcolor= 'white'
- bgcolor= 'black'
+  person = {
+    firstname: 'Thomas',
+    lastname: 'Lhomme',
+    age: 37,
+    address: {
+      street: "Bolt street",
+      city: 'Liverpool'
+    }
+  }
+  employed = false
+  displayStatus = true
+  textcolor = 'white'
+  bgcolor = 'black'
 
   user: User = {
-   name: 'sdfdsz'
+    name: 'sdfdsz'
   }
 
- makeMeYoungPlease(){
-  this.person.age--
- }
+  makeMeYoungPlease() {
+    this.person.age--
+  }
 
 }
-
