@@ -7,6 +7,8 @@ import {Product} from './model/product.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  thecolor = 'red';
+
   product: Product = {
     id: 10,
     price: 15,

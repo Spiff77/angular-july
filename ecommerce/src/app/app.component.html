@@ -1,5 +1,6 @@
 <h1> Ecommerce </h1>
-<ul>
+
+<ul [style.color]="thecolor">
   <li>{{product.id}}</li>
   <li>{{product.name}}</li>
   <li>{{product.description}}</li>
@@ -10,3 +11,9 @@
 </ul>
 
 <button (click)="toggleActive()">Toggle active</button>
+
+<select name="" id="" [(ngModel)]="thecolor">
+  <option value="red">Rouge</option>
+  <option value="green">Vert</option>
+  <option value="yellow">Jaune</option>
+</select>
