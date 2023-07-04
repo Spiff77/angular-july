@@ -22,4 +22,8 @@ export class AppComponent {
   toggleActive() {
     this.product.active = !this.product.active
   }
+
+  setColor(element: any) {
+    this.thecolor = element.target.value
+  }
 }

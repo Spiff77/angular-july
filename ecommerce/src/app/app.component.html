@@ -12,7 +12,7 @@
 
 <button (click)="toggleActive()">Toggle active</button>
 
-<select name="" id="" [(ngModel)]="thecolor">
+<select name="" id="" (change)="setColor($event)">
   <option value="red">Rouge</option>
   <option value="green">Vert</option>
   <option value="yellow">Jaune</option>
