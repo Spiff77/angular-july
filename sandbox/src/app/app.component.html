@@ -1,0 +1,8 @@
+<h1>Coucou</h1>
+<p [style.color]="textcolor" [style.background-color]="bgcolor" [hidden]="!displayStatus">Bonjour {{person.firstname}} {{person.lastname}}, vous avez {{person.age}} ans,
+  vous êtes {{employed === true ? 'employé' : 'non employé' }}</p>
+<p>{{person?.address?.city}}</p>
+<input type="text" name="" id="" [(ngModel)]="person.firstname">
+<button (mouseover)="person.age = person.age -1">Make me younger</button>
+
+{{user.name}}
