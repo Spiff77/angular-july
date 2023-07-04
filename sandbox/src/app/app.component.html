@@ -1,4 +1,8 @@
 <h1>Coucou</h1>
+
+<app-main-parent></app-main-parent>
+<app-secondary-parent></app-secondary-parent>
+-----------------
 <p [style.color]="textcolor" [style.background-color]="bgcolor" [hidden]="!displayStatus">Bonjour {{person.firstname}} {{person.lastname}}, vous avez {{person.age}} ans,
   vous êtes {{employed === true ? 'employé' : 'non employé' }}</p>
 <p>{{person?.address?.city}}</p>
