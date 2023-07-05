@@ -15,7 +15,7 @@ export class SecondaryParentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.users = this.us.users
+    this.users = this.us.findAll()
   }
 
   ageReceived = 0;

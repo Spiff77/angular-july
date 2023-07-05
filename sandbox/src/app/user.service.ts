@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import {User} from './model/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  users =  [{
+ private users =  [{
       age: 30,
       name: 'Chantal goya'
     },
@@ -15,4 +16,8 @@ export class UserService {
     }]
 
   constructor() { }
+
+  findAll(): User[] {
+   return this.users
+  }
 }

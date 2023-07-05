@@ -14,12 +14,12 @@ export class MainParentComponent implements OnInit{
   constructor(private us: UserService) {}
 
   ngOnInit(): void {
-    this.theuser = this.us.users[0]
+    this.theuser = this.us.findAll()[0]
   }
 
   @HostListener('click')
   changeName(){
-    this.us.users[0].name = 'Titi'
+    this.us.findAll()[0].name = 'Titi'
   }
 
 }
