@@ -1,4 +1,5 @@
 :host{
   display: block;
   background-color: #e2cdf8;
+  cursor: pointer;
 }

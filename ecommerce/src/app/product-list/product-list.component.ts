@@ -8,6 +8,8 @@ import {Product} from '../model/product.model';
 })
 export class ProductListComponent {
 
+  selectedProduct: Product | undefined
+
   product1: Product = {
     id: 10,
     name: 'Frank Zappa',
@@ -27,6 +29,12 @@ export class ProductListComponent {
     price: 15,
     promo: .1,
     description: "bliblib blib bllibbliilb lblib"
+  }
+
+
+
+  receiveSelectedProduct(product: Product){
+    this.selectedProduct = product
   }
 
 }
