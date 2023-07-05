@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from './model/user.model';
+import {BehaviorSubject, filter, interval, map, Observable, Subject} from 'rxjs';
+import {logMessages} from '@angular-devkit/build-angular/src/tools/esbuild/utils';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   person = {
     firstname: 'Thomas',
@@ -24,6 +26,10 @@ export class AppComponent {
 
   user: User = {
     name: 'sdfdsz', age: 40
+  }
+
+  ngOnInit(): void {
+
   }
 
   makeMeYoungPlease() {
