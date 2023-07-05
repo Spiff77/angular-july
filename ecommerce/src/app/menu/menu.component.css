@@ -1,0 +1,14 @@
+:host{
+  display: block;
+  background-color: #cdf8f1;
+  height: 60px;
+  padding-top: 10px;
+}
+
+ul{
+  display:flex;
+  justify-content: space-around;
+}
+li{
+  list-style-type: none;
+}
