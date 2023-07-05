@@ -1,4 +1,6 @@
 <p>secondary-parent works!</p>
-<app-child [user]="user1"></app-child>
-<app-child [user]="user2"></app-child>
+  Age selectionné: {{ageReceived}}
+<app-child (outVar)="receiveValueFromChild($event)" [user]="users[0]"></app-child>
+<app-child (outVar)="receiveValueFromChild($event)" [user]="users[1]"></app-child>
 <app-child></app-child>
+

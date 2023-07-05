@@ -8,14 +8,22 @@ import {User} from '../model/user.model';
 })
 export class SecondaryParentComponent {
 
-  user1: User = {
+  users: User[] = [{
     age: 30,
     name: 'Chantal goya'
-  }
+  },
+  {
+      age: 23,
+      name: 'Carlos'
+    }
+  ]
 
-  user2: User = {
-    age: 35,
-    name: 'Carlos'
-  }
+  ageReceived = 0;
+
+ receiveValueFromChild(value: number){
+   this.ageReceived = value
+ }
+
+
 
 }
