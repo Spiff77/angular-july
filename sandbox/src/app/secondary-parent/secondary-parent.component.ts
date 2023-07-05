@@ -8,14 +8,14 @@ import {User} from '../model/user.model';
 })
 export class SecondaryParentComponent {
 
-  users: User[] = [{
+  user1: User = {
     age: 30,
     name: 'Chantal goya'
-  },
-  {
+  }
+
+  user2: User = {
     age: 35,
     name: 'Carlos'
-    }
-  ]
+  }
 
 }
