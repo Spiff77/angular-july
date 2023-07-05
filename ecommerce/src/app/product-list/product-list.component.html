@@ -1,7 +1,8 @@
 <h3>Product List</h3>
-<p [hidden]="!selectedProduct">
+<p *ngIf="selectedProduct">
   <span class="cursor" (click)="selectedProduct = undefined">[X]</span> You have clicked on: {{selectedProduct?.name}} ({{selectedProduct?.id}})
 </p>
-<app-product (out)="receiveSelectedProduct($event)" [product]="product1"></app-product>
-<app-product (out)="receiveSelectedProduct($event)" [product]="product2"></app-product>
+<div *ngIf="getProductsFiltered().length === 0">Product list is empty</div>
+<input type="text" [(ngModel)]="filteringStr">
+<app-product *ngFor="let prod of getProductsFiltered()" (out)="receiveSelectedProduct($event)" [product]="prod"></app-product>
 
