@@ -2,6 +2,6 @@
   Age selectionné: {{ageReceived}}
 <!--
 <app-child (outVar)="receiveValueFromChild($event)" [user]="users[0]"></app-child>
-<app-child (outVar)="receiveValueFromChild($event)" [user]="users[1]"></app-child>
+<app-child (outVar)="receiveValueFromChild($mvent)" [user]="users[1]"></app-child>
 -->
 <app-child *ngFor="let u of users" (outVar)="receiveValueFromChild($event)" [user]="u"></app-child>
