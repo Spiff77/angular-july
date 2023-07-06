@@ -1,9 +1,6 @@
 <h1>Coucou</h1>
-
-<app-count-total></app-count-total>
-
-<app-main-parent></app-main-parent>
-<app-secondary-parent></app-secondary-parent>
+<app-menu></app-menu>
+<router-outlet></router-outlet>
 -----------------
 <p [style.color]="textcolor" [style.background-color]="bgcolor" *ngIf="displayStatus">Bonjour {{person.firstname}} {{person.lastname}}, vous avez {{person.age}} ans,
   vous êtes {{employed === true ? 'employé' : 'non employé' }}</p>

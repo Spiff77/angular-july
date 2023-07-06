@@ -23,8 +23,8 @@ export class HttpUserService {
  2 - Associer des valeurs dans ces environments (voir git - Sandbox)
  3 - Utiliser ces valeurs dans le service (voir git - Sandbox, HttpUserService)
 
-- deploy
- 1 - installer http-server 'npm install -g http-server'
+- Deploy
+ 1 - Installer http-server 'npm install -g http-server'
  2 - Build du projet grace à 'ng build --configuration=production'
  3 - Deplacement en console dans ./dist/[projectName]
  4 - Lancer http-server

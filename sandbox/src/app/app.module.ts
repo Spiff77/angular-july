@@ -9,6 +9,19 @@ import { ChildComponent } from './child/child.component';
 import { CountTotalComponent } from './count-total/count-total.component';
 import { CountElemComponent } from './count-elem/count-elem.component';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MenuComponent } from './menu/menu.component';
+
+const routes: Routes = [
+  {path: 'main', component: MainParentComponent},
+  {path: 'secondary', component: SecondaryParentComponent},
+  {path: 'plusone', component: CountTotalComponent},
+  {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent},
+]
 
 @NgModule({
   declarations: [
@@ -17,12 +30,16 @@ import {HttpClientModule} from '@angular/common/http';
     SecondaryParentComponent,
     ChildComponent,
     CountTotalComponent,
-    CountElemComponent
+    CountElemComponent,
+    HomeComponent,
+    NotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
