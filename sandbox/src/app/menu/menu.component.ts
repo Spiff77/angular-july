@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-
+  names = [
+    'ThomasX2',
+    'Lilian',
+    'Pauline',
+    'Christophe',
+    'Florian'
+  ]
 }

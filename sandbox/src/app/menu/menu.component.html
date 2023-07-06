@@ -4,4 +4,6 @@
   <li class="link" routerLink="/main">Main</li>
   <li class="link" routerLink="/secondary">Secondary</li>
   <li class="link" routerLink="/dummy">Dummy</li>
+
+  <li *ngFor="let n of names" class="link" [routerLink]="['/sayhello', n]">Say hello {{n}}</li>
 </ul>
