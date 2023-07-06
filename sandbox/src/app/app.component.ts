@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from './model/user.model';
-import {BehaviorSubject, filter, interval, map, Observable, Subject} from 'rxjs';
+import {BehaviorSubject, delay, filter, from, interval, map, Observable, of, Subject} from 'rxjs';
 import {logMessages} from '@angular-devkit/build-angular/src/tools/esbuild/utils';
 
 @Component({
@@ -29,7 +29,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let name = 'toto'
 
+    let names = ['a', 'b', 'c']
+
+    from(names).subscribe(v => console.log(v))
   }
 
   makeMeYoungPlease() {
