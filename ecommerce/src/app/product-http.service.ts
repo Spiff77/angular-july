@@ -13,4 +13,12 @@ export class ProductHttpService {
   findAll(): Observable<Product[]>{
     return this.http.get<Product[]>('http://localhost:8086/learn/api/products')
   }
+
+  findOne(id: number): Observable<Product>{
+    return this.http.get<Product>(`http://localhost:8086/learn/api/products/${id}`)
+  }
+
+  delete(id: number): Observable<void>{
+    return this.http.delete<void>(`http://localhost:8086/learn/api/products/${id}`)
+  }
 }

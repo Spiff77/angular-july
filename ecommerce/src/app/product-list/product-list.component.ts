@@ -31,23 +31,8 @@ export class ProductListComponent implements OnInit{
 }
 
 /*
-  Créer le composent DetailComponent
-    product: Product
-    hint:
-      ngOnInit(): void {
-        let id = Number(this.activeRoute.snapshot.paramMap.get('id') ?? -1);
-
-        if(Number(id) >= 1){
-           this.productService.findOne(id).subscribe(p => this.product = p)
-       }
-  }
-
-  Nouvelle methode dans le service ProductHttpService
-    findOne(id: number):  Observable<Product> -->http://localhost:8086/learn/api/products/[idInRouter(:id)]
-      http.get<Product>(...)
-
-  Ajouter une route dans AppModule
-    {path: 'products/:id', compoenent: DetailComponent}
-
-
+      - Dans ProductDetail, ajouter un bouton de suppression afin de supprimer le produit
+        Il faut demander une confirmation avant suppression.
+        Lorsque la suppression est faite (et uniquement lorsqu'elle est terminé (retour de subscribe))
+         rediriger vers /produits.
  */

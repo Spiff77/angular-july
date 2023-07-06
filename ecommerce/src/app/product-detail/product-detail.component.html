@@ -1,0 +1,14 @@
+<div *ngIf="product">
+  <h1>Détail du produit {{product.name}} ({{product.id}})</h1>
+  <p>{{product.description}}</p>
+
+  <ul>
+    <li>{{product.category}}</li>
+    <li>{{product.price}}</li>
+    <li>{{product.promo}}</li>
+</ul>
+</div>
+<button class="cursor" (click)="displayConfirmRemove = true">Supprimer</button>
+<div *ngIf="displayConfirmRemove">Êtes-vous sur de vouloir supprimer le produit "{{product.name}}"<br>
+  <span class="cursor" (click)="deleteProduct()">Oui</span> &nbsp; <span class="cursor" (click)="displayConfirmRemove = false">Non</span></div>
+<span class="cursor" routerLink="/products" class="defaultLink">Retour à la liste</span>
