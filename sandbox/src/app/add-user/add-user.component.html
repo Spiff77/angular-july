@@ -1,5 +1,5 @@
 <h3>Add User</h3>
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" (ngSubmit)="sendDataToApi()">
   <div>
     <label for="the-name">Name:</label>
     <input type="text" name="" id="the-name" formControlName="name">
@@ -12,6 +12,7 @@
     <label for="the-age">Age:</label>
     <input type="number" name="" id="the-age" formControlName="age">
   </div>
+  <button>Add</button>
   <pre>
     {{myForm.value | json}}
   </pre>

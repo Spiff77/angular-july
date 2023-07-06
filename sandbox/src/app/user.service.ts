@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {User} from './model/user.model';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,4 +21,6 @@ export class UserService {
   findAll(): User[] {
    return this.users
   }
+
+
 }

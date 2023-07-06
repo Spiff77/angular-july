@@ -16,6 +16,11 @@ export class HttpUserService {
   findAll(): Observable<User[]> {
     return this.http.get<User[]>(this.url)
   }
+
+  add(value: User): Observable<User> {
+    return this.http.post<User>(this.url, value)
+
+  }
 }
 /*
 - Environements

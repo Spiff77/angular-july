@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {UserService} from '../user.service';
+import {HttpUserService} from '../http-user.service';
 
 @Component({
   selector: 'app-add-user',
@@ -10,7 +12,8 @@ export class AddUserComponent implements OnInit{
 
   myForm!: FormGroup
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private userService: HttpUserService) {
   }
 
   ngOnInit(): void {
@@ -24,4 +27,8 @@ export class AddUserComponent implements OnInit{
 /products/add --> ProductAddComponent
 
  */
+  sendDataToApi() {
+    console.log(this.myForm.value)
+    this.userService.add(this.myForm.value).subscribe()
+  }
 }
