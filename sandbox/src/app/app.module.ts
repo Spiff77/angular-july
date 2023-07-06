@@ -14,6 +14,11 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MenuComponent } from './menu/menu.component';
 import { SayHelloComponent } from './say-hello/say-hello.component';
+import { AComponent } from './a/a.component';
+import { BComponent } from './b/b.component';
+import { CComponent } from './c/c.component';
+import { XComponent } from './x/x.component';
+import { YComponent } from './y/y.component';
 
 const routes: Routes = [
   {path: 'main', component: MainParentComponent},
@@ -36,7 +41,12 @@ const routes: Routes = [
     HomeComponent,
     NotFoundComponent,
     MenuComponent,
-    SayHelloComponent
+    SayHelloComponent,
+    AComponent,
+    BComponent,
+    CComponent,
+    XComponent,
+    YComponent
   ],
   imports: [
     BrowserModule,
