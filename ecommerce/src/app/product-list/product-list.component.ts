@@ -28,5 +28,12 @@ export class ProductListComponent implements OnInit{
     return this.products.filter(prod => prod.name.toLowerCase().includes(this.filteringStr.toLowerCase()))
   }
 
-
 }
+/*
+
+ /products --> ProductListComponent
+ /home --> HomeComponent
+ / --redirect--> /home
+
+ Penser à updater le menu
+ */
