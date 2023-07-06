@@ -2,12 +2,6 @@
 <app-menu></app-menu>
 <router-outlet></router-outlet>
 -----------------
-<app-x></app-x>
-<app-y></app-y>
-<app-a></app-a>
-<app-b></app-b>
-<app-c></app-c>
------------------
 <p [style.color]="textcolor" [style.background-color]="bgcolor" *ngIf="displayStatus">Bonjour {{person.firstname}} {{person.lastname}}, vous avez {{person.age}} ans,
   vous êtes {{employed === true ? 'employé' : 'non employé' }}</p>
 <p>{{person.address.city}}</p>

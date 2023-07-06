@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MainParentComponent } from './main-parent/main-parent.component';
 import { SecondaryParentComponent } from './secondary-parent/secondary-parent.component';
 import { ChildComponent } from './child/child.component';
@@ -19,6 +19,7 @@ import { BComponent } from './b/b.component';
 import { CComponent } from './c/c.component';
 import { XComponent } from './x/x.component';
 import { YComponent } from './y/y.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 const routes: Routes = [
   {path: 'main', component: MainParentComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'plusone', component: CountTotalComponent},
   {path: 'home', component: HomeComponent},
   {path: 'sayhello/:name', component: SayHelloComponent},
+  {path: 'users/add', component: AddUserComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent},
 ]
@@ -46,13 +48,15 @@ const routes: Routes = [
     BComponent,
     CComponent,
     XComponent,
-    YComponent
+    YComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

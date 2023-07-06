@@ -1,0 +1,18 @@
+<h3>Add User</h3>
+<form [formGroup]="myForm">
+  <div>
+    <label for="the-name">Name:</label>
+    <input type="text" name="" id="the-name" formControlName="name">
+  </div>
+  <div>
+    <label for="the-email">Email:</label>
+    <input type="text" name="" id="the-email" formControlName="email">
+  </div>
+  <div>
+    <label for="the-age">Age:</label>
+    <input type="number" name="" id="the-age" formControlName="age">
+  </div>
+  <pre>
+    {{myForm.value | json}}
+  </pre>
+</form>
