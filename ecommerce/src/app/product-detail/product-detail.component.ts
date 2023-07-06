@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {ProductHttpService} from '../product-http.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Product} from '../model/product.model';
+import {logMessages} from '@angular-devkit/build-angular/src/tools/esbuild/utils';
+import {NotificationService} from '../notification.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,6 +17,7 @@ export class ProductDetailComponent implements OnInit{
 
   constructor(private productService: ProductHttpService,
               private activeRoute: ActivatedRoute,
+              private notificationService: NotificationService,
               private router: Router) {}
 
   ngOnInit(): void {
@@ -26,7 +29,8 @@ export class ProductDetailComponent implements OnInit{
 
   deleteProduct() {
     this.productService.delete(this.product.id).subscribe(() =>
-      this.router.navigateByUrl('/products')
+        this.notificationService.sendMessage()
+     // this.router.navigateByUrl('/products')
     )
 
   }

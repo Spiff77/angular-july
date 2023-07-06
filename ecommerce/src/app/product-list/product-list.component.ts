@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Product} from '../model/product.model';
 import {ProductHttpService} from '../product-http.service';
+import {NotificationService} from '../notification.service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,9 +15,16 @@ export class ProductListComponent implements OnInit{
   filteringStr = ''
   products: Product[] = []
 
-  constructor(private ps: ProductHttpService) {}
+  constructor(private ps: ProductHttpService,
+              private notificationService: NotificationService) {}
 
   ngOnInit(): void {
+    this.fetchData();
+    this.notificationService.notification$.subscribe(()  =>
+      this.fetchData())
+  }
+
+  private fetchData() {
     this.ps.findAll().subscribe(products => this.products = products)
   }
 
