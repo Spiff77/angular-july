@@ -21,4 +21,9 @@ export class ProductHttpService {
   delete(id: number): Observable<void>{
     return this.http.delete<void>(`http://localhost:8086/learn/api/products/${id}`)
   }
+
+  add(prod: Product): Observable<Product> {
+    return this.http.post<Product>(`http://localhost:8086/learn/api/products`, prod)
+
+  }
 }

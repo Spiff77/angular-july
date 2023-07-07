@@ -1,4 +1,12 @@
-<form [formGroup]="theForm">
+
+<ul *ngIf="formSubmitted">
+  <li *ngIf="theForm?.get('name')?.errors?.['minlength']">Name is too short</li>
+  <li *ngIf="theForm?.get('name')?.errors?.['maxlength']">Name is too long</li>
+  <li *ngIf="theForm?.get('name')?.errors?.['required']">Name is required</li>
+  <li *ngIf="theForm?.get('price')?.errors?.['min']">Price have to be greater than 10</li>
+
+</ul>
+<form [formGroup]="theForm" (ngSubmit)="addProduct()">
   <div>
     <label for="theName">Name</label>
     <input type="text" id="theName" formControlName="name">
