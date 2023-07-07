@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {UserService} from '../user.service';
 import {HttpUserService} from '../http-user.service';
 
@@ -22,6 +22,7 @@ export class AddUserComponent implements OnInit{
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: [''],
       age: [0],
+      musicstyles: this.fb.array(['Rock','Blues']),
       address: this.fb.group({
         name:'',
         streetname:'',
@@ -29,6 +30,10 @@ export class AddUserComponent implements OnInit{
         city: ''
       })
     })
+  }
+
+  getMusicStylesControl(): FormArray {
+    return this.myForm.get("musicstyles") as FormArray
   }
 /*
 /products/add --> ProductAddComponent
@@ -42,4 +47,11 @@ export class AddUserComponent implements OnInit{
     }
   }
 
+  addStyle() {
+    this.getMusicStylesControl().push(new FormControl(''))
+  }
+
+  removeStyle(id: number){
+    this.getMusicStylesControl().removeAt(id)
+  }
 }

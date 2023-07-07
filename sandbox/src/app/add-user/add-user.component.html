@@ -27,6 +27,14 @@
       <input type="text" id="the-address-streetname" formControlName="streetname" >
     </div>
   </fieldset>
+  <fieldset formArrayName="musicstyles">
+    <legend>Music style</legend>
+    <div *ngFor="let fc of getMusicStylesControl().controls; let i=index">
+      <label for="the-address-name">Style {{i+1}}:</label>
+      <input type="text" [formControlName]="i" id="the-address-name" formControlName="name"> <span (click)="removeStyle(i)">[x]</span>
+    </div>
+    <button (click)="addStyle()">Add style</button>
+  </fieldset>
   <button>Add</button>
   <pre>
     {{myForm.value | json}}
