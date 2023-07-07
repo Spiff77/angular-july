@@ -1,8 +1,12 @@
 <h3>Add User</h3>
-<form [formGroup]="myForm" (ngSubmit)="sendDataToApi()">
+<ul *ngIf="formSubmitted">
+  <li *ngIf="myForm?.get('name')?.errors?.['required']">Name is required</li>
+  <li *ngIf="myForm?.get('name')?.errors?.['minlength']">Name is too short</li>
+</ul>
+<form [formGroup]="myForm" (ngSubmit)="submit()">
   <div>
     <label for="the-name">Name:</label>
-    <input type="text" name="" id="the-name" formControlName="name">
+    <input type="text" name="" id="the-name" formControlName="name" >
   </div>
   <div>
     <label for="the-email">Email:</label>
@@ -15,5 +19,6 @@
   <button>Add</button>
   <pre>
     {{myForm.value | json}}
+    {{myForm.valid | json}}
   </pre>
 </form>
