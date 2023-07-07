@@ -31,6 +31,14 @@
     <label for="theActive">Active</label>
     <input type="checkbox" id="theActive" formControlName="active">
   </div>
+  <div formGroupName="supplier">
+    <label for="theActive">Supplier</label>
+    <select formControlName="id">
+      <option [value]="s.id" *ngFor="let s of suppliers">{{s.companyName}}</option>
+    </select>
+  </div>
+
+
   <button>OK</button>
 </form>
 <pre>

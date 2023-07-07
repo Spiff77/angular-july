@@ -1,6 +1,6 @@
 <h3>Product List</h3>
 <p *ngIf="selectedProduct">
-  <span class="cursor" (click)="selectedProduct = undefined">[X]</span> You have clicked on: {{selectedProduct?.name}} ({{selectedProduct?.id}})
+  <span class="cursor" (click)="selectedProduct = undefined">[X]</span> You have clicked on: {{selectedProduct.name}} ({{selectedProduct.id}})
 </p>
 <div *ngIf="getProductsFiltered().length === 0">Product list is empty</div>
 <input type="text" [(ngModel)]="filteringStr">
