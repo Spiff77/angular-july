@@ -16,6 +16,17 @@
     <label for="the-age">Age:</label>
     <input type="number" name="" id="the-age" formControlName="age">
   </div>
+  <fieldset formGroupName="address">
+    <legend>Adresse</legend>
+    <div>
+      <label for="the-address-name">Address Name:</label>
+      <input type="text" id="the-address-name" formControlName="name" >
+    </div>
+    <div>
+      <label for="the-address-streetname">Street Name:</label>
+      <input type="text" id="the-address-streetname" formControlName="streetname" >
+    </div>
+  </fieldset>
   <button>Add</button>
   <pre>
     {{myForm.value | json}}

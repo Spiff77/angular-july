@@ -22,6 +22,12 @@ export class AddUserComponent implements OnInit{
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: [''],
       age: [0],
+      address: this.fb.group({
+        name:'',
+        streetname:'',
+        streetnumber: 0,
+        city: ''
+      })
     })
   }
 /*
@@ -35,4 +41,5 @@ export class AddUserComponent implements OnInit{
       this.userService.add(this.myForm.value).subscribe()
     }
   }
+
 }
