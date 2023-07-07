@@ -4,6 +4,7 @@
   <li class="link" routerLink="/main">Main</li>
   <li class="link" routerLink="/secondary">Secondary</li>
   <li class="link" routerLink="/dummy">Dummy</li>
+  <li class="link" (click)="openModal()">Open Modal</li>
   <li class="link" routerLink="/users/add">Add user</li>
 
   <li *ngFor="let n of names" class="link" [routerLink]="['/sayhello', n]">Say hello {{n}}</li>

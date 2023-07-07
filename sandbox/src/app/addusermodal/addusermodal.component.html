@@ -1,9 +1,12 @@
-<h3>Add User</h3>
+<div class="modal-header">
+<h3>{{title}}</h3>
+</div>
+<div class="modal-content">
 <ul *ngIf="formSubmitted">
   <li *ngIf="myForm?.get('name')?.errors?.['required']">Name is required</li>
   <li *ngIf="myForm?.get('name')?.errors?.['minlength']">Name is too short</li>
 </ul>
-<form [formGroup]="myForm" (ngSubmit)="submit()">
+<form [formGroup]="myForm">
   <div>
     <label for="the-name">Name:</label>
     <input type="text" name="" id="the-name" formControlName="name" >
@@ -35,9 +38,9 @@
     </div>
     <button [class.machintruc]="false" (click)="addStyle()">Add style</button>
   </fieldset>
-  <button>Add</button>
-  <pre>
-    {{myForm.value | json}}
-    {{myForm.valid | json}}
-  </pre>
 </form>
+</div>
+<div class="modal-footer">
+  <button (click)="submit()" >Add</button>
+  <button (click)="cancel()" >Cancel</button>
+</div>

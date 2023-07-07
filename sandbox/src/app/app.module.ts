@@ -20,6 +20,8 @@ import { CComponent } from './c/c.component';
 import { XComponent } from './x/x.component';
 import { YComponent } from './y/y.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddusermodalComponent } from './addusermodal/addusermodal.component';
 
 const routes: Routes = [
   {path: 'main', component: MainParentComponent},
@@ -49,14 +51,16 @@ const routes: Routes = [
     CComponent,
     XComponent,
     YComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddusermodalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

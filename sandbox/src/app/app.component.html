@@ -7,5 +7,6 @@
 <p>{{person.address.city}}</p>
 <input type="text" name="" id="" [(ngModel)]="person.firstname">
 <button (click)="makeMeYoungPlease()" *ngIf="person.age > 0">Make me younger</button>
+<ngb-progressbar type="warning" [value]="75" [striped]="true" [animated]="true"><i>50%</i></ngb-progressbar>
 
 {{user.name}}
